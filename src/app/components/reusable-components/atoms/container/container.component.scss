@@ -1,0 +1,21 @@
+.customContainer {
+    background-color: #f0f4fa;
+    padding: 2rem;
+    min-height: calc(100vh - 87px);
+    .titleContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2rem;
+        .pageTitle {
+            font-weight: bold;
+        }
+        .pageActions {
+            margin: 0 0 0.5rem 0;
+        }
+
+        &.titleNoPageActions {
+            align-items: end;
+        }
+    }
+}

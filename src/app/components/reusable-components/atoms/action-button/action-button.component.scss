@@ -1,0 +1,31 @@
+// Will be applied on parent wrapper
+:host-context {
+    // to avoid margin on last button
+    &:not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    .action-button {
+        cursor: pointer;
+        &[disabled] {
+            border-color: #e0e0e0 !important;
+            background-color: #e0e0e0 !important;
+            cursor: not-allowed;
+        }
+
+        &.primary {
+            background-color: #2751bf;
+            color: #fcfcfc;
+            &:hover {
+                // box-shadow: 3px 3px 9px rgb(0 0 0 / 10%);
+
+                filter: brightness(98%);
+            }
+        }
+    }
+    mat-icon {
+        ::ng-deep {
+            line-height: 0.95;
+        }
+    }
+}

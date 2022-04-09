@@ -1,0 +1,33 @@
+<section [class.sidenav]="isExpanded">
+    <!-- <div class="toggle">
+        <mat-icon (click)="toggleMenu.emit(null)">
+        subject
+        </mat-icon>
+    </div> -->
+    <mat-list class="nav">
+        <a
+            mat-list-item
+            routerLinkActive="active-link"
+            class="navListItem"
+            (click)="toggleMenu.emit(null)"
+            [matTooltip]="!isExpanded ? 'Expand Side Nav' : 'Collapse Side Nav'"
+            matTooltipPosition="right"
+        >
+            <mat-icon mat-list-icon> subject</mat-icon>
+            <p matLine *ngIf="isExpanded">MENU</p>
+        </a>
+    </mat-list>
+    <mat-list class="nav" *ngFor="let route of routeLinks">
+        <a
+            mat-list-item
+            routerLinkActive="active-link"
+            class="navListItem"
+            routerLink="{{ route.link }}"
+            [matTooltip]="!isExpanded ? route.name : ''"
+            matTooltipPosition="right"
+        >
+            <mat-icon mat-list-icon> {{ route.icon }}</mat-icon>
+            <p matLine *ngIf="isExpanded">{{ route.name }}</p>
+        </a>
+    </mat-list>
+</section>

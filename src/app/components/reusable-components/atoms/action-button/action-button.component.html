@@ -1,0 +1,13 @@
+<button
+    class="action-button"
+    mat-flat-button
+    [matTooltip]="matTooltipText"
+    [matTooltipPosition]="matTooltipPosition"
+    [ngClass]="{
+        primary: type === 'primary'
+    }"
+    (click)="onButtonClick($event)"
+>
+    <mat-icon *ngIf="matIconNamePrefix">{{ matIconNamePrefix }}</mat-icon>
+    {{ buttonText }}
+</button>

@@ -1,0 +1,7 @@
+<div class="customContainer">
+    <div class="titleContainer" [ngClass]="{ titleNoPageActions: content.childNodes.length > 0 }">
+        <h1 class="pageTitle">{{ pageTitle }}</h1>
+        <div class="pageActions" #content><ng-content select="[pageActions]"></ng-content></div>
+    </div>
+    <ng-content select="[pageContent]"></ng-content>
+</div>
