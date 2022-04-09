@@ -1,4 +1,9 @@
 <div class="customCard brdr">
     <span class="card-name">{{ cardData.volumeInfo.title }}</span>
-    <span class="author" *ngFor="let item of cardData.volumeInfo.authors">{{ item }}</span>
+    <span
+        ><span>Authors:&nbsp;</span
+        ><span class="author" *ngFor="let item of cardData.volumeInfo.authors">{{ item }}</span></span
+    >
+    <span>Publisher:&nbsp;{{ cardData.volumeInfo.publisher }}</span>
+    <span>Published Date:&nbsp;{{ cardData.volumeInfo.publishedDate }}</span>
 </div>
