@@ -8,9 +8,17 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { AngularMaterialModule } from './angular-material-modules/angular-material.module';
 import { BooksComponent } from './books/books.component';
 import { ReusableUiModule } from './components/reusable-components/reusable-ui.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
     declarations: [AppComponent, SideNavComponent, BooksComponent],
-    imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, AngularMaterialModule, ReusableUiModule],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        AngularMaterialModule,
+        ReusableUiModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })

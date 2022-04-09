@@ -1,0 +1,31 @@
+.customCard {
+    transition: transform 0.2s;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+    }
+    span {
+        &.card-name {
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &.brdr {
+        border-left: 0.4rem solid #ffa839;
+    }
+
+    .author {
+        &:not(:last-child)::after {
+            content: ', ';
+        }
+    }
+}

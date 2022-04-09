@@ -1,5 +1,7 @@
 <app-container [pageTitle]="'Books'">
-    <div pageContent>Content</div>
+    <div pageContent>
+        <div class="booksGridView"><app-book-card *ngFor="let item of cardData" [cardData]="item"></app-book-card></div>
+    </div>
     <div pageActions>
         <app-action-button [type]="'primary'" [buttonText]="'Create New Book'"></app-action-button>
     </div>
