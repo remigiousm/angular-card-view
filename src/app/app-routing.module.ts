@@ -5,16 +5,16 @@ import { BooksComponent } from './books/books.component';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'books',
         pathMatch: 'full',
     },
 
     {
-        path: 'book',
+        path: 'books',
         component: BooksComponent,
     },
 
-    { path: '**', redirectTo: 'home' },
+    { path: '**', redirectTo: 'books' },
 ];
 
 @NgModule({

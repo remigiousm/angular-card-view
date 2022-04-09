@@ -9,5 +9,5 @@ export class SideNavComponent {
     @Input() isExpanded: boolean = true;
     @Output() toggleMenu = new EventEmitter();
 
-    public routeLinks = [{ link: 'book', name: 'BOOKS', icon: 'book' }];
+    public routeLinks = [{ link: 'books', name: 'BOOKS', icon: 'book' }];
 }
