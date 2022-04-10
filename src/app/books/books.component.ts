@@ -46,9 +46,14 @@ export class BooksComponent implements OnInit {
         return filteredValues;
     }
     getBooksData() {
-        this.api.generic_get_api('books/v1/volumes?q=kaplan%20test%20prep').subscribe((res) => {
-            this.cardData = res.items;
-            this.searchFormControl.setValue('');
-        });
+        this.api.generic_get_api('books/v1/volumes?q=kaplan%20test%20prep').subscribe(
+            (res) => {
+                this.cardData = res.items;
+                this.searchFormControl.setValue('');
+            },
+            (err) => {
+                console.log('Error while fetching data');
+            }
+        );
     }
 }
