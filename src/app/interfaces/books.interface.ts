@@ -1,5 +1,10 @@
 export interface books {
-    items: any[];
-    kind: 'books#volumes';
-    totalItems: 1270;
+    kind: string;
+    id: string;
+    etag: string;
+    selfLink: string;
+    volumeInfo: object;
+    saleInfo: object;
+    accessInfo: object;
+    searchInfo: object;
 }

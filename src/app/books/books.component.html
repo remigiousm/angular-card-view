@@ -1,6 +1,22 @@
 <app-container [pageTitle]="'Books'">
     <div pageContent>
-        <div class="booksGridView"><app-book-card *ngFor="let item of cardData" [cardData]="item"></app-book-card></div>
+        <form class="example-form">
+            <mat-form-field class="searchBooks" appearance="standard">
+                <mat-label>Search</mat-label>
+
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    aria-label="Search books"
+                    matInput
+                    [formControl]="searchFormControl"
+                />
+                <span matPrefix><mat-icon>search</mat-icon></span>
+            </mat-form-field>
+        </form>
+        <div class="booksGridView">
+            <app-book-card *ngFor="let book of filteredBooks$ | async" [cardData]="book"></app-book-card>
+        </div>
     </div>
     <div pageActions>
         <app-action-button [type]="'primary'" [buttonText]="'Create New Book'"></app-action-button>

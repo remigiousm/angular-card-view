@@ -3,3 +3,14 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
+.searchBooks {
+    ::ng-deep {
+        .mat-form-field-flex {
+            align-items: flex-end;
+        }
+
+        .mat-form-field-prefix {
+            margin-bottom: 4px;
+        }
+    }
+}

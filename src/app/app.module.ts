@@ -9,6 +9,7 @@ import { AngularMaterialModule } from './angular-material-modules/angular-materi
 import { BooksComponent } from './books/books.component';
 import { ReusableUiModule } from './components/reusable-components/reusable-ui.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
     declarations: [AppComponent, SideNavComponent, BooksComponent],
     imports: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
         BrowserAnimationsModule,
         AngularMaterialModule,
         ReusableUiModule,
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
